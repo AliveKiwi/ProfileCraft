@@ -4,6 +4,18 @@ const Schema = mongoose.Schema
 mongoose.Promise = global.Promise
 
 const userPersonalInfoSchema = new Schema({
+    firstName:{
+        type: String,
+        minlength: 5,
+        maxlength: 128,
+        required: true
+    },
+    lastName:{
+        type: String,
+        minlength: 5,
+        maxlength: 128,
+        required: true
+    },
     mobile: { 
         type: Number,
         min:10,
